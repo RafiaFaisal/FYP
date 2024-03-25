@@ -1,0 +1,705 @@
+/*** General ***/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  background-color: #000000;
+
+  /* Added a background color for the body */
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.m-5-auto {
+  margin: 5rem auto;
+}
+
+/*** Landing Page ***/
+
+
+/*** Landing Page ***/
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* Align content to the top */
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  
+  /* Adjust path to your image */
+}
+
+.content-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 500px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 10%;
+  /* Adjust this value to move the container down */
+}
+
+.main-title {
+  font-size: 4rem;
+  color: #FFF;
+  /* Changed to white as requested */
+  position: absolute;
+  top: 2rem;
+  /* Adjust if needed */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.landing-illustration {
+  max-width: 70%;
+  /* Adjust the size of the illustration */
+  height: auto;
+  margin: 1rem 0;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.primary-button {
+  padding: 1rem 2rem;
+  background: #2e423b;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: background-color 0.5s, transform 0.5s;
+  cursor: pointer;
+  text-transform: capitalize;
+  margin: 0.5rem;
+}
+
+.primary-button:hover {
+  background-color: #38413b;
+  transform: scale(1.05);
+}
+
+/* Media query for responsive adjustments */
+@media (max-width: 768px) {
+  .main-title {
+    top: 1rem;
+    /* Smaller shift for smaller screens */
+    font-size: 2.5rem;
+    /* Smaller font size for smaller screens */
+  }
+
+  .content-container {
+    max-width: 90%;
+    /* Allow more width on smaller screens */
+    margin-top: 15%;
+    /* More margin at the top for smaller screens */
+  }
+
+  .landing-illustration {
+    max-width: 90%;
+    /* Larger illustration for smaller screens */
+  }
+}
+
+
+
+/*** Login Page ***/
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* Use the viewport height to ensure full page height */
+  
+  /* Correct path as necessary */
+  background-size: cover;
+  background-position: center;
+}
+
+.login-form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+  width: 100%;
+  max-width: 320px;
+  /* Set a max-width for larger screens */
+  margin: auto;
+}
+
+.login-form h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.login-form input {
+  width: calc(100% - 20px);
+  /* Full width minus padding */
+  margin-bottom: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.login-form button {
+  width: calc(100% - 20px);
+  /* Full width minus padding */
+  padding: 10px;
+  margin-top: 1rem;
+  background-color: #2e423b;
+  /* Emerald green color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #38413b;
+  /* Darker shade for hover state */
+}
+
+.login-form a {
+  display: block;
+  /* Make links block level for easy click */
+  text-align: center;
+  margin-top: 1rem;
+  color: #2e423b;
+  /* Emerald green color */
+  text-decoration: none;
+}
+
+.login-form a:hover {
+  text-decoration: underline;
+}
+
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* Full height of the viewport */
+  background-size: cover;
+  background-position: center;
+  background: rgba(255, 255, 255, 0.85);
+  /* Adjust the background as necessary */
+  padding: 2rem;
+  border-radius: 8px;
+  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Box shadow for depth */
+  width: 90%;
+  /* You can set this to a percentage of the viewport width */
+  max-width: 1000px;
+  /* Increase max-width as needed, e.g., to 500px */
+}
+
+.register-form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+  width: 100%;
+  max-width: 320px;
+  /* Set a max-width for larger screens */
+  margin: auto;
+}
+
+.register-form h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.register-form input {
+  width: calc(100% - 20px);
+  /* Full width minus padding */
+  margin-bottom: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.register-form button {
+  width: calc(100% - 20px);
+  /* Full width minus padding */
+  padding: 10px;
+  margin-top: 1rem;
+  background-color: #2e423b;
+  /* Emerald green color */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.register-form button:hover {
+  background-color: #38413b;
+  /* Darker shade for hover state */
+}
+
+.register-form a {
+  display: block;
+  /* Make links block level for easy click */
+  text-align: center;
+  margin-top: 1rem;
+  color: #2e423b;
+  /* Emerald green color */
+  text-decoration: none;
+}
+
+.register-form a:hover {
+  text-decoration: underline;
+}
+
+.register-form .terms-service {
+  display: block;
+  /* Make terms of service block level */
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.register-form #checkbox {
+  margin-right: 5px;
+}
+
+/*** Home Page ***/
+.home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+  /* A light grey background */
+}
+
+.home-page-title {
+  color: #222;
+  /* Dark grey color */
+  font-size: 2rem;
+  /* A reasonable size for the main title */
+  margin-bottom: 1rem;
+  /* Space below the title */
+}
+
+.logout-button {
+  background-color: #202c28;
+  /* A different color for logout */
+}
+
+.logout-button:hover {
+  background-color: #3a4641;
+  
+}
+
+/* Responsive design: Adjust form size on smaller screens */
+@media (max-width: 768px) {
+
+  .register-container,
+  .login-container,
+  .content-container {
+    padding: 1rem;
+    margin: 1rem;
+    width: auto;
+    /* Adjust width for smaller screens */
+  }
+
+  .main-title {
+    font-size: 3rem;
+    /* Smaller size for main title */
+  }
+
+  .main-para {
+    font-size: 1.5rem;
+    /* Smaller size for main paragraph */
+  }
+}
+
+/* Footer styles if needed */
+
+/* Existing styles, with modifications */
+.terms {
+  display: flex;
+  align-items: center;
+  /* Aligns items in the middle vertically */
+  flex-wrap: nowrap;
+  /* Prevents the items from wrapping */
+  margin-top: 1rem;
+  /* Space above the terms section */
+}
+
+.terms #checkbox {
+  margin-right: 0.5rem;
+  /* Space between the checkbox and the label text */
+  flex-shrink: 0;
+  /* Prevents the checkbox from shrinking */
+}
+
+/* Styles for the label to ensure it doesn't wrap to the next line */
+.terms label {
+  white-space: nowrap;
+  /* Prevents the text from wrapping */
+  overflow: hidden;
+  /* Hide overflow */
+  text-overflow: ellipsis;
+  /* Adds an ellipsis if the text is too long */
+  margin-bottom: 0;
+  /* Override any default bottom margins */
+  cursor: pointer;
+  /* Indicates a clickable item */
+  flex-grow: 1;
+  /* Allows the label to fill the space available */
+}
+
+/* Style adjustments for responsive design if needed */
+@media (max-width: 768px) {
+  .terms {
+    flex-direction: column;
+    /* Stack checkbox and label on smaller screens */
+    align-items: flex-start;
+    /* Aligns items to the left */
+  }
+
+  .terms #checkbox {
+    margin-bottom: 0.5rem;
+    /* Space between checkbox and label on smaller screens */
+  }
+
+  .terms label {
+    white-space: normal;
+    /* Allows text wrapping on smaller screens */
+  }
+}
+
+.navbar {
+  background-color: #fff;
+  /* White background for the navbar */
+  position: fixed;
+  /* Fixed at the top of the page */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  /* Adjust the padding as needed */
+  z-index: 1000;
+  /* Ensure the navbar stays on top */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Optional: adds shadow for depth */
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* Adjust the space between logo and title if you have a logo image */
+}
+
+.navbar-logo img {
+  height: 40px;
+  /* Adjust based on the size of your actual logo */
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 1rem;
+  /* Spacing between menu items */
+}
+
+.navbar-item,
+.settings-dropdown button {
+  background: none;
+  border: none;
+  color: #333;
+  /* Adjust text color as needed */
+  padding: 10px 15px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hover effect for dropdown menu items */
+.navbar-item:hover,
+.settings-dropdown button:hover {
+  color: #0275d8;
+  /* Example hover color: adjust as needed */
+}
+
+/* Dropdown menu styles */
+.settings-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 5px);
+  /* Small gap between the menu and dropdown */
+  background-color: #fff;
+  min-width: 160px;
+  /* Minimum width of the dropdown */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  /* Ensure the dropdown goes over other content */
+}
+
+.settings-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Additional styling for dropdown links */
+.dropdown-menu a {
+  color: #555;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f6f6f6;
+  /* Light grey background on hover */
+}
+
+/* Ensures the content below the navbar doesn't get hidden under it */
+.home-page {
+  padding-top: 60px;
+  /* Adjust based on the height of your navbar */
+}
+
+/* Existing backgroundStyle and other CSS... */
+
+/* Resets padding and margin to handle browser inconsistencies */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles for the navigation bar */
+.navbar {
+  background-color: #fff;
+  /* White background for the navbar */
+  position: fixed;
+  /* Fixed at the top of the page */
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Full width */
+  display: flex;
+  justify-content: space-between;
+  /* Space between items */
+  align-items: center;
+  /* Vertically center items */
+  padding: 0.5rem 2rem;
+  /* Padding around the navbar */
+  z-index: 1000;
+  /* Ensures the navbar stays on top */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Shadow for depth */
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  /* Logo text size */
+  color: #333;
+  /* Logo text color */
+  font-weight: bold;
+  /* Bold logo text */
+  cursor: pointer;
+  /* Cursor as pointer when hover over logo text */
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  /* Aligns links in center vertically */
+  gap: 1rem;
+  /* Space between About and Settings */
+}
+
+.navbar-settings {
+  position: relative;
+  /* For absolute positioning of dropdown */
+}
+
+.navbar-settings>button {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  /* Padding inside the button */
+  cursor: pointer;
+  /* Cursor as pointer when hover over button */
+  font-size: 1rem;
+  /* Button text size */
+}
+
+.dropdown-menu {
+  display: none;
+  /* Hidden by default */
+  position: absolute;
+  /* Positioning relative to settings */
+  background-color: #fff;
+  /* Background of dropdown */
+  right: 0;
+  /* Aligns dropdown to the right */
+  top: 100%;
+  /* Dropdown appears right below the button */
+  border: 1px solid #ddd;
+  /* Border for dropdown */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  /* Shadow for dropdown */
+}
+
+.navbar-settings:hover .dropdown-menu {
+  display: block;
+  /* Shows dropdown on hover */
+}
+
+/* Styles for links inside dropdown */
+.dropdown-menu a,
+.dropdown-menu button {
+  padding: 0.5rem 1rem;
+  /* Padding for dropdown links */
+  display: block;
+  /* Makes link take the full width */
+  text-decoration: none;
+  /* Removes underline from links */
+  color: #333;
+  /* Text color for dropdown links */
+  background: none;
+  border: none;
+  width: 100%;
+  /* Forces full width */
+  text-align: left;
+  /* Aligns text to the left */
+}
+
+/* Hover styles for dropdown links */
+.dropdown-menu a:hover,
+.dropdown-menu button:hover {
+  background-color: #f7f7f7;
+  /* Background color on hover */
+}
+
+/* Ensures the content below the navbar doesn't get hidden */
+.home-page {
+  padding-top: 60px;
+  /* Adjust based on the height of your navbar */
+}
+
+/* Your existing backgroundStyle */
+
+/*** UserProfile Page ***/
+.user-profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  /* Make space for fixed navbar */
+  min-height: 100vh;
+  padding-bottom: 2rem;
+  color: #fff;
+  /* Text color */
+}
+
+.user-profile-form {
+  width: 100%;
+  max-width: 500px;
+  /* Match the width with your form elements */
+  margin-top: 2rem;
+  padding: 2rem;
+  background: #2e423b;
+  /* Emerald green background to match the theme */
+  border-radius: 10px;
+  /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+}
+
+.user-profile-form h2 {
+  color: #fff;
+  /* Text color */
+  margin-bottom: 1rem;
+}
+
+.user-profile-form label {
+  margin-bottom: .5rem;
+  color: #fff;
+  /* Label color */
+  font-size: 1rem;
+}
+
+.user-profile-form input {
+  width: calc(100% - 20px);
+  /* Full width minus padding */
+  margin-bottom: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  /* Subtle border styling */
+  background: #fff;
+  /* White input background for contrast */
+  color: #333;
+  /* Text color inside inputs */
+}
+
+.user-profile-form button {
+  width: 100%;
+  /* Full width */
+  padding: 10px;
+  margin-top: 1rem;
+  background-color: #38413b;
+  /* A darker emerald green for button */
+  color: #fff;
+  /* Text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.user-profile-form button:hover {
+  background-color: #4b584b;
+  /* Even darker shade for hover state */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .user-profile-form {
+    width: 90%;
+    /* Make form narrower on smaller screens */
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+
+  .user-profile-container {
+    padding-top: 60px;
+    /* Adjust based on the height of your navbar */
+  }
+}
